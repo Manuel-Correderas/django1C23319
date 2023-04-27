@@ -1,0 +1,68 @@
+
+
+{% block menu %}{% endblock menu %}
+{% load static %}
+    <section>
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Viandas saludables</title>
+                <link rel="stylesheet" href="{%static 'publica/css/estilos.css'%}">
+                <link rel="shortcut icon" type="image/png" href="{% static '/imagenespedidos/logo.png' %}">
+            </head>
+            <body>
+            <!--Header-->
+                <header>
+                    <div class="grid-container">
+                        <div class="item1" style= "background-color: rgb(199, 240, 240)">
+                            <div>
+                                <img id="logo" src="{%static '/imagenespedidos/logo.png'%}" alt="logo">
+                                <h3 class="nombre">Salud Viandah
+                                </h3>
+                            </div>
+                    <div id="pestañas">
+                        <a class="pest" href= "index">Nosotros</a>
+                        <a class="pest" href="{%url 'menu'%}">Menu</a>
+                        <a class="pest" href="{%url 'pedido'%}">Pedidos</a>
+                        <a class="pest" href="{%url 'promociones'%}">Promociones</a>
+                        <a class="pest" href="inicio/#contacto">Contacto</a>
+                    </div>
+                </div>
+                <style>
+                    img{
+                        width: 60%;
+                        display: block;
+                        object-fit: scale-down;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    h1{text-align: center;
+                    font-family: helena;
+                    src: url(./Helena.ttf);   }
+                    </style>
+                </header><br><br><br>
+                <h1>MENÚ</h1><br><br>
+                    <div id="app">
+                        <table>
+                            <thead>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Imagen</th>
+                            </thead>
+                        <tr v-for="producto of productos">
+                            <td>{{producto.nombre}}</td>
+                            <td>{{producto.descripcion}}</td>
+                            <td align="center">{{producto.precio}}</td>
+                            <td align="center">{{producto.stock}}</td>
+                            <td><img :src="producto.imagen" :alt="producto.nombre"></td>
+                        </tr>
+                    </table><br><br><br>
+                </div>
+           
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <script src="{%static 'publica/js/main.js'%}"></script>
+            </body>
+    </section>
