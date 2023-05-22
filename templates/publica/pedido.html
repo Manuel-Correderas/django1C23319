@@ -1,0 +1,219 @@
+{% block pedido %}{% endblock pedido %}
+    <section>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{%static 'publica/css/estilos.css'%}">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" ></scrip>        
+    <head>
+        <!doctype html>
+        <html lang="en">
+        
+        <head>
+          <title>Salud Viandah
+            
+          </title>
+          <!-- Required meta tags -->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+          <!-- Bootstrap CSS v5.2.1 -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        
+        </head>
+        
+        <body>
+          <header>
+            <!-- place navbar here -->
+          </header>
+          <main>
+        
+          </main>
+          <footer>
+            <!-- place footer here -->
+          </footer>
+          <!-- Bootstrap JavaScript Libraries -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+          </script>
+        
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+          </script>
+        </body>
+        
+        </html>
+    </head>
+
+    <body>
+        <header>
+                <!-- place navbar here -->
+            <div class="container">
+                <img id="logo" src=" {%static '/imagenespedidos/logo.png'%}" alt="logo">
+                <span style class="nombre" id="slogan">Salud Viandah</span>
+            </div>
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-md navbar-light  border-6 border-bottom ">
+                        <div class="container-fluid">
+                                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+                                    <span class="navbar-toggler-icon" ></span>
+                                </button>
+                            <div id="MenuNavegacion" class="collapse navbar-collapse">
+                                <ul class="navbar-nav ms-6 mt-12">
+                                    <li class="nav-item"><a class="nav-link" href="menu">Menu</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="promociones">Promociones</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>    
+            </div>    
+
+        </header>
+            <main>
+                <br>
+                    <div class="container mt-6">
+                        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide">Promo Mercado Pago -30%</li>
+                                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <img src="{%static './imagenes/mp.JPG'%}" class="w-100 d-block" alt="First slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3>Mercado Pago</h3>
+                                        <p>Promo Mercado Pago -30%</p>
+                                        <a style="text-decoration:none; color:rgb(247, 247, 252)"  href="https://www.mercadopago.com.ar">Acá</a>
+
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{%static './imagenes/pedi.png'%}" class="w-100 d-block" alt="Second slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3>PedidosYa</h3>
+                                        <p>PedidosYa -30% + Envío Gratis </p>
+                                        <a style="text-decoration:none; color:rgb(247, 247, 252)"  href="https://www.pedidosya.com.ar/">Acá</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{%static './imagenes/salud.jpg'%}" class="w-100 d-block" alt="Third slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3>Aprovechá las promociones y come sano</h3>
+                                        <p>Promociones válidas sólo para menúes no promocionales</p>
+                                        <a style="text-decoration:none; color:rgb(247, 247, 252)"  href="menu.html">Acá</a>
+
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{%static './imagenes/criptos2.png'%}" class="w-100 d-block" alt="Third slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3>Pagá en Criptos</h3>
+                                        <p>Recibí un descuento del 10%</p>
+                                        <a style="text-decoration:none; color:rgb(247, 247, 252)"  href="https://www.binance.com/es-AR">Acá</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <h1 class="g-3 mt-3">Podés encargarnos las mejores comidas sanas de la Capital</h1>
+                    <div class="container">
+                        <form class="row g-3 mt-3" action="https://formsubmit.co/manugonzo1111@gmail.com" method="post">
+                            <div class="col-6">
+                                <label for="emailInput" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="Escribe tu email">
+                            </div>
+                            <div class="col-6">
+                                <label for="inputName" class="form-label">Nombre y apellidos:</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Escribe tu nombre completo">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Dirección:</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Calle/Número/Piso/Departamento">
+                            </div>
+                            <div class="col-12"><p><STRONG>RECORDÁ QUE LOS ENVÍOS SON SÓLO DENTRO DE CABA</STRONG></p></div>
+                            <div class="col-6">
+                                <label for="inputphone" class="form-label">Teléfono:</label>
+                                <input type="number"  class="form-control"  id="inputphone" placeholder="Teléfono">
+                            </div>
+                            <div class="col-12">
+                                <label for="menus">Menúes:</label>
+                                <select name="menus" id="opc.menu">
+                                    <option value="0"></option>
+                                    <option value="1">Ensalada de Langostinos</option>
+                                    <option value="2">Ensalada de Palta</option>
+                                    <option value="3">Salmón con Verduras</option>
+                                    <option value="4">PROMO: Ensalada Pollo Especial</option>
+                                    <option value="5">PROMO: Ensalada de pollo</option>
+                                    <option value="6">PROMO: Ensalada Vegetariana</option>
+                                    <option value="7">PROMO: Pechuga de Pollo con guarnición</option>
+                                    <option value="8">PROMO: Pollo a la plancha</option>
+                                    <option value="9">PROMO: Milanesa de pollo</option>
+                                    <option value="10">PROMO: Bife vacuno</option>
+                                    <option value="11">PROMO: Albondigas de vacuno</option>
+                                    <option value="12">PROMO: Carne de vacuno desmechada</option>
+                                    <option value="13">PROMO: Mix Especial</option>
+                                    <option value="14">PROMO: Mix Milanesa</option>
+                                    <option value="15">PROMO: Mix Albóndigas</option>
+                                </select><br><br>
+                                <button type="submit">ENVIAR </button><br><br>
+                                <input type="reset" value="Limpiar Campos"><br>
+                            </div>
+                        </form>
+                    </div><br>
+                
+            </main>
+            <footer position="center" id="contacto" >
+                <!-- place footer here -->
+                <footer class="bg-dark text-center text-white">
+                    <!-- Grid container -->
+                    <div class="container p-4 pb-0">
+                      <!-- Section: Social media -->
+                      <section class="mb-4">
+                        <!-- Google -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.yahoo.com" role="button"
+                          ><i class="/imagenes/goo.png"></i></a>
+                  
+                  
+                        <!-- Linkedin -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/manuel-correderas-012a09188/" role="button"
+                          ><i class="./imagenes/in.png"></i></a>
+                  
+                        <!-- Github -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Manuel-Correderas" role="button"
+                          ><i class="./imagenes/git.png"></i></a>
+                      </section>
+                      <!-- Section: Social media -->
+                    </div>
+                    <!-- Grid container -->
+                  
+                    <!-- Copyright -->
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                      © 2023 Copyright:
+                      <a class="text-white" href="https://aulasvirtuales.bue.edu.ar/">MDBootstrapcom/Manuel Correderas para Programa CaC 4.0</a>
+                    </div>
+                    <!-- Copyright -->
+                  </footer>
+            </footer>
+            
+            </body>
+    </html>
+</section>
