@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 env = environ.Env()
 environ.Env.read_env()
@@ -41,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'publica'
+    'publica',
+    'adm',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +74,8 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = 'proyecto_23319.wsgi.application'
 
 
@@ -80,8 +84,12 @@ WSGI_APPLICATION = 'proyecto_23319.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env("DATABASE_NAME"),
+        'USER':env("DATABASE_USER"),
+        'PASSWORD':env("DATABASE_PASSWORD"),
+        'HOST':env("DATABASE_HOST"),
+        'PORT': env("DATABASE_PORT"),
     }
 }
 
@@ -126,8 +134,11 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [ BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'static_root'
+DEFAULT_AUTO_FIELD='django.db.models.BigAutoField'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
