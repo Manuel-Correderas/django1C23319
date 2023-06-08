@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block content %}
+  <h1>Menú</h1>
+  <ul>
+    {% for menu_item in menu_items %}
+      <li>{{ menu_item.nombre }} - {{ menu_item.precio }}</li>
+    {% empty %}
+      <li>No hay elementos en el menú.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
