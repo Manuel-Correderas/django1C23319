@@ -1,6 +1,11 @@
-from django.urls import path, re_path,include
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('',views.index_adm,name='index_adm.html'),
+    # Otras URLs existentes en el archivo
+
+    # URL de la vista de la tarea
+    path('tareas/', views.tareas, name='tareas'),
+    path('tareas/crear/',views.crear_tarea, name='crear_tarea'),
 ]
+

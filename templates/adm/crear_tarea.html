@@ -1,0 +1,26 @@
+{% extends 'publica/index.html' %} 
+{% block logueado %}
+<nav>
+    <div id="pestañas" style="background-color: rgb(0,0,0)">
+        
+        {% if user.is_authenticated %}
+            {{username}}
+            <a  color="white" href="/logout">Salir</a>
+            <a  color="white" href="{%url 'registrarse' %}">Registrarse</a>
+        {% else %}
+            <a  color="white" href="/signin">Entrar</a>
+            
+        {% endif %}
+        
+    </div>
+</nav>
+{% block content %}
+<h1>Crear tarea</h1>
+<form action="/tareas/crear" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button>
+        Guardar
+    </button>
+</form>
+{% endblock  %}

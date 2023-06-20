@@ -1,4 +1,4 @@
-{% block menu %}{% endblock menu %}
+{% block menu %}{% endblock %}
 {% load static %}
     <section>
             <head>
@@ -21,7 +21,7 @@
                                 </h3>
                             </div>
                     <div id="pestañas">
-                        <a class="pest" href= "index">Nosotros</a>
+                        <a class="pest" href= "{%url 'inicio'%}">Nosotros</a>
                         <a class="pest" href="{%url 'menu'%}">Menu</a>
                         <a class="pest" href="{%url 'pedido'%}">Pedidos</a>
                         <a class="pest" href="{%url 'promociones'%}">Promociones</a>

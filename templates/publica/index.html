@@ -3,10 +3,28 @@
 <html lang="es">
 
 <head>
+    {% block logueado %}
+    <nav>
+        <div id="pestañas" style="background-color: rgb(0,0,0)">
+            
+            {% if user.is_authenticated %}
+                {{username}}
+                <a  color="white" href="/logout">Salir</a>
+                
+            {% else %}
+                <a  color="white" href="/signin">Entrar</a>
+                <a  color="white" href="{%url 'registrarse' %}">Registrarse</a>
+                
+            {% endif %}
+            
+        </div>
+    </nav>
+    {% endblock logueado %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} Viandas saludables{% endblock %}</title>
+    
     
     {% load static %}
     <link rel="stylesheet" href="{%static 'publica/css/estilos.css'%}">
@@ -29,7 +47,7 @@
                     <a class="pest" href="{%url 'menu'%}">Menu</a>
                     <a class="pest" href="{%url 'pedido'%}">Pedidos</a>
                     <a class="pest" href="{%url 'promociones'%}">Promociones</a>
-                    <a class="pest" href="#contacto">Contacto</a>
+                    <a class="pest" href="{%url 'contacto'%}">Contacto</a>
                 </div>
             </div>
     </header>
@@ -51,6 +69,7 @@
         <br>
         <h4>Elaboramos platos caseros y saludables:</h4>
         <div>
+            {% block tareas %}{% endblock tareas %}
             <p class="nosotros">
                 Una alimentación sana nos brinda la oportunidad de desarrollarnos plenamente, de vivir
                 con
@@ -59,8 +78,14 @@
                 Sin embargo nuestro ritmo actual muchas veces no nos permite gozar de una buena alimentación.
                 Por eso, para poder comer rico y saludable en el día a día, ofrecémos una amplia variedad de viandas
                 saludables.
-            </p>
+            </p><br>
+            {% block /signup/ %}{% endblock /signup/ %} 
+        </div><br>
     </main>
+    
+    <!--FORMULARIO-->
+    
+    
 </body>
  <footer id="contacto">
      <div id="abajo">
@@ -78,6 +103,7 @@
              <a target="_blank" href="https://api.whatsapp.com/send?phone=0543874564252">
                  <img class="redes" src="{%static '/imagenes/whatsapp.png'%}" alt="whatsapp"></a>
          </div>
+         
  </footer>
 
 

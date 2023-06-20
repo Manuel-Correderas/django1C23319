@@ -1,0 +1,12 @@
+{% extends 'publica/index.html' %}
+{% block logueado %}
+<h1 background="black" color="white">Sign in</h1>
+{{error}}
+<form action="/signin/" method="POST">
+{% csrf_token %}
+    {{form}}
+    <button>
+        Entrar
+    </button>
+</form>
+{% endblock logueado %}
