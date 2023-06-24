@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <h1>Detalle del Elemento del Menú</h1>
+  <h2>{{ menu_item.nombre }}</h2>
+  <p>Descripción: {{ menu_item.descripcion }}</p>
+  <p>Precio: {{ menu_item.precio }}</p>
+  <a href="{% url 'menu_update' menu_item.pk %}">Editar</a>
+  <a href="{% url 'menu_delete' menu_item.pk %}">Eliminar</a>
+{% endblock %}
